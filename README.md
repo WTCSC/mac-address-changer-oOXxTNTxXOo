@@ -2,18 +2,18 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=17754093)
 
 # To-Do 
-1. [] backup the original MAC address for restoration 
-2. [] change computers MAC address 
-3. [] randomly generating MAC address 
-4. [] scan the local network and lsit 
-    1. [] detected MAC addresses 
-    2. [] corresponding vendors 
-5. [] add input validation 
-6. [] add error handling 
-7. [] accept shell scripts 
-8. [] detailed read me 
-    1. [] installation giude 
-    2. [] usage example 
-    3. [] explain error handling 
-    4. [] troubleshooting tips 
-    5. [] screenshot/video/gif 
+1. - [] backup the original MAC address for restoration 
+2. - [] change computers MAC address 
+3. - [] randomly generating MAC address 
+4. - [] scan the local network and lsit 
+    1. - [] detected MAC addresses 
+    2. - [] corresponding vendors 
+5. - [] add input validation 
+6. - [] add error handling 
+7. - [] accept shell scripts 
+8. - [] detailed read me 
+    1. - [] installation giude 
+    2. - [] usage example 
+    3. - [] explain error handling 
+    4. - [] troubleshooting tips 
+    5. - [] screenshot/video/gif 
