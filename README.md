@@ -4,7 +4,7 @@
 # To-Do 
 1. - [x] backup the original MAC address for restoration 
 2. - [ ] change computers MAC address 
-3. - [ ] randomly generating MAC address 
+3. - [x] randomly generating MAC address 
 4. - [ ] scan the local network and lsit 
     1. - [ ] detected MAC addresses 
     2. - [ ] corresponding vendors 
