@@ -32,21 +32,27 @@ printf $kill':%02X:%02X:%02X\n' $[RANDOM%256] $[RANDOM%256] $[RANDOM%256]
 
 
 # Define the network interface and new MAC address
-INTERFACE="eth0"
-NEW_MAC="02:01:02:03:04:08"
 
 # Bring the interface down
-sudo ip link set $INTERFACE down
+# sudo ip link set $INTERFACE down
 
 # Change the MAC address
-sudo ip link set $INTERFACE address $NEW_MAC
+# sudo ip link set $INTERFACE address $NEW_MAC
 
 # Bring the interface up
-sudo ip link set $INTERFACE up
+# sudo ip link set $INTERFACE up
 
 # Verify the change
-ip link show $INTERFACE | grep ether
+# ip link show $INTERFACE | grep ether
 
 #08:00:27:01:d4:0f
 #sudo ip link add eth1 type dummy
-#
+#sudo systemctl restart networking
+#sudo ip link set dev $interface address 02:01:02:03:04:08
+
+#ip link add vmnic0 type dummy
+#ip link set vmnic0 addr 00:15:5d:35:ea:15
+
+#ip link add vmnic0 type bridge
+#ip link add vmnic0 type bond
+#ip tuntap add vmnic0 mode tap
