@@ -10,7 +10,7 @@
 
 #grabs mac address and saves to file
 saveOgMAC(){ 
-line_number=$(($(wc -l < ogMAC.txt)+1))
+line_number=$(($(wc -l < ogMAC.txt)+1)) # should check for existance
 # ip link show eth0 | awk '/ether/ {print $2}' | sed "s/^/$line_number - /" >> ogMAC.txt
 macadds=$(ip link show eth0 | awk '/ether/ {print $2}' | sed "s/^/$line_number - /")
 #echo "$macadds"
@@ -56,3 +56,47 @@ printf $kill':%02X:%02X:%02X\n' $[RANDOM%256] $[RANDOM%256] $[RANDOM%256]
 #ip link add vmnic0 type bridge
 #ip link add vmnic0 type bond
 #ip tuntap add vmnic0 mode tap
+
+# sudo ip link set dev eth0 address 00:1B:63:84:45:E6
+
+ChangeMaddress(){
+
+
+}
+
+#||
+
+case "$1" in # used cases as i thought they might work better than using function calls. 
+    savemac) 
+        #check for file ogMAC.txt
+        #check for macaddress in ogMAC.txt
+
+        line_number=$(($(wc -l < ogMAC.txt)+1))
+        ip link show eth0 | awk '/ether/ {print $2}' | sed "s/^/$line_number - /" >> ogMAC.txt
+    ;;
+    changemac)
+        case "$2" in # checks for mac address input
+
+
+
+        esac
+
+        #changemac
+    ;;
+    ranmac)
+        macP=$(ip link show eth0 | awk '/ether/ {print $2}' | awk '{print $1}' | awk -F: '{print $1":"$2":"$3}')
+        printf $macP':%02X:%02X:%02X\n' $[RANDOM%256] $[RANDOM%256] $[RANDOM%256] 
+    
+        #changemac
+    
+    ;;
+    scan)
+
+    ;;
+    --help) echo "options are [scan][ranmac][changmac][savemac]"
+            echo "you should also try running sudo or bash ./mac.sh if you arn't already"
+    ;;
+    *) echo "are you trying to use ./mac? for help try --help";;
+esac
+
+
