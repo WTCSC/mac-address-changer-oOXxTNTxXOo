@@ -3,17 +3,20 @@
 
 # To-Do 
 1. - [x] backup the original MAC address for restoration 
-2. - [ ] change computers MAC address 
+2. - [x] change computers MAC address 
 3. - [x] randomly generating MAC address 
-4. - [ ] scan the local network and lsit 
-    1. - [ ] detected MAC addresses 
+4. - [x] scan the local network and list 
+    1. - [x] detected MAC addresses 
     2. - [ ] corresponding vendors 
-5. - [ ] add input validation 
-6. - [ ] add error handling 
-7. - [ ] accept shell scripts 
+5. - [x] add input validation 
+6. - [x] add error handling 
+7. - [x] accept shell scripts 
 8. - [ ] detailed read me 
     1. - [ ] installation giude 
     2. - [ ] usage example 
     3. - [ ] explain error handling 
     4. - [ ] troubleshooting tips 
     5. - [ ] screenshot/video/gif 
+
+# Mac Address Manager
+The Mac Address Manager is a tool that is cabable of automating the reconfiguration of your MAC Address. 
