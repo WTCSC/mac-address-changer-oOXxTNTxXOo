@@ -57,7 +57,7 @@ printf $kill':%02X:%02X:%02X\n' $[RANDOM%256] $[RANDOM%256] $[RANDOM%256]
 #ip link add vmnic0 type bond
 #ip tuntap add vmnic0 mode tap
 
-# sudo ip link set dev eth0 address 00:1B:63:84:45:E6
+# sudo ip link set dev eth0 address 67:46:FA:BC:1E:8A
 
 ChangeMaddress(){
 
@@ -65,6 +65,7 @@ ChangeMaddress(){
 }
 
 #||
+#&&
 
 case "$1" in # used cases as i thought they might work better than using function calls. 
     savemac) 
@@ -78,7 +79,7 @@ case "$1" in # used cases as i thought they might work better than using functio
         case "$2" in # checks for mac address input
 
 
-
+ 
         esac
 
         #changemac
@@ -91,7 +92,7 @@ case "$1" in # used cases as i thought they might work better than using functio
     
     ;;
     scan)
-
+        
     ;;
     --help) echo "options are [scan][ranmac][changmac][savemac]"
             echo "you should also try running sudo or bash ./mac.sh if you arn't already"
