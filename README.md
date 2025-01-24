@@ -20,3 +20,8 @@
 
 # Mac Address Manager
 The Mac Address Manager is a tool that is cabable of automating the reconfiguration of your MAC Address. 
+
+# how to set-up 
+
+
+# how to use

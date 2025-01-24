@@ -25,6 +25,14 @@ case "$1" in # used cases as i thought they might work better than using functio
         newmac=$2
         ChangeMaddress
     ;;
+    safechange) 
+        interface=$1
+        newmac=$2
+        [[ "$newmac" =~ ^([a-fA-F0-9]{2}:){5}[a-fA-F0-9]{2}$ ]] && echo "Valid MAC address" || echo "Invalid MAC address"
+        sudo ip ink set dev $interface down
+        sudo ip link set dev $interface address $newmac
+        sudo ip link set dev $interface up
+    ;;
     ranmac)
         interface=$2
         newmac=$(printf '%02X:%02X:%02X:%02X:%02X:%02X\n' $[RANDOM%256] $[RANDOM%256] $[RANDOM%256] $[RANDOM%256] $[RANDOM%256] $[RANDOM%256]) 
